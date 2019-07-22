@@ -10,11 +10,15 @@
 
         <h2 th:text="${author.name}"></h2>
         <h6 th:inline="text">Age: [[${author.age}]]</h6>
+        <h6 th:inline="text">[[${author.bio}]]</h6>
 
         <ul>
             <th:block th:each="book : ${author.books}">
                 <li th:inline="text">
                     <b>[[${book.title}]]</b> has [[${book.pages}]] pages.
+                </li>
+                <li th:inline="text">
+                    [[${book.description}]]
                 </li>
             </th:block>
         </ul>
